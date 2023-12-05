@@ -1,0 +1,5 @@
+# cat=General/others/a1; type=string; label=CTypes with IRRE Buttons: Enable IRRE Buttons for CTypes. (CSV)
+enableButtonsForCTypes = text
+
+# cat=General/others/b1; type=string; label=Icon Identifier: CSV list
+icons = far-chevron-left, far-chevron-right, download, file, file-pdf, paper-plane

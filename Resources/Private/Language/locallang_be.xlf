@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en"
+		  datatype="plaintext"
+		  original="EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf"
+		  date="2023-12-04T14:05:46Z"
+		  product-name="ot-irrebuttons">
+		<header/>
+		<body>
+			<trans-unit id="tx_otirrebuttons_domain_model_button" resname="tx_otirrebuttons_domain_model_button">
+				<source>IRRE Buttons</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.label" resname="tx_otirrebuttons_domain_model_button.label">
+				<source>Buttons</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.description" resname="tx_otirrebuttons_domain_model_button.description">
+				<source>Buttons with optional icons</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.label" resname="tx_otirrebuttons_button_size.label">
+				<source>Button Size</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.default" resname="tx_otirrebuttons_button_size.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.small" resname="tx_otirrebuttons_button_size.small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.large" resname="tx_otirrebuttons_button_size.large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link.label" resname="tx_otirrebuttons_domain_model_button.link.label" approved="yes">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.label" resname="tx_otirrebuttons_domain_model_button.layout.label">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.position.label" resname="tx_otirrebuttons_domain_model_button.position.label">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon.label" resname="tx_otirrebuttons_domain_model_button.icon.label">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.label" resname="tx_otirrebuttons_domain_model_button.icon_position.label">
+				<source>Icon Position</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.left" resname="tx_otirrebuttons_domain_model_button.left">
+				<source>Left</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.center" resname="tx_otirrebuttons_domain_model_button.center">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.right" resname="tx_otirrebuttons_domain_model_button.right">
+				<source>Right</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-left">
+				<source>Chevron Left</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-right">
+				<source>Chevron Right</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file" resname="tx_otirrebuttons_domain_model_button.icons.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file-pdf" resname="tx_otirrebuttons_domain_model_button.icons.file-pdf">
+				<source>PDF</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.download" resname="tx_otirrebuttons_domain_model_button.icons.download">
+				<source>Download</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.paper-plane" resname="tx_otirrebuttons_domain_model_button.icons.paper-plane">
+				<source>Paper plane</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de"
+		  datatype="plaintext"
+		  original="EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf"
+		  date="2023-12-04T14:05:46Z"
+		  product-name="ot-irrebuttons">
+		<header/>
+		<body>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.label" resname="tx_otirrebuttons_domain_model_button.label" approved="yes">
+				<source>Buttons</source>
+				<target>Buttons</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.description" resname="tx_otirrebuttons_domain_model_button.description" approved="yes">
+				<source>Buttons with optional icons</source>
+				<target>Buttons mit optionalen Icons</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.label" resname="tx_otirrebuttons_button_size.label" approved="yes">
+				<source>Button Size</source>
+				<target>Button Größe</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.default" resname="tx_otirrebuttons_button_size.default" approved="yes">
+				<source>Default</source>
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.small" resname="tx_otirrebuttons_button_size.small" approved="yes">
+				<source>Small</source>
+				<target>Klein</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_size.large" resname="tx_otirrebuttons_button_size.large" approved="yes">
+				<source>Large</source>
+				<target>Groß</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label" approved="yes">
+				<source>Label</source>
+				<target>Beschriftung</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link.label" resname="tx_otirrebuttons_domain_model_button.link.label" approved="yes">
+				<source>Link</source>
+				<target>Link</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label" approved="yes">
+				<source>Text</source>
+				<target>Text</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.label" resname="tx_otirrebuttons_domain_model_button.layout.label" approved="yes">
+				<source>Layout</source>
+				<target>Layout</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.position.label" resname="tx_otirrebuttons_domain_model_button.position.label" approved="yes">
+				<source>Position</source>
+				<target>Position</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon.label" resname="tx_otirrebuttons_domain_model_button.icon.label" approved="yes">
+				<source>Icon</source>
+				<target>Icon</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.label" resname="tx_otirrebuttons_domain_model_button.icon_position.label" approved="yes">
+				<source>Icon Position</source>
+				<target>Icon Position</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.left" resname="tx_otirrebuttons_domain_model_button.left" approved="yes">
+				<source>Left</source>
+				<target>Links</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.center" resname="tx_otirrebuttons_domain_model_button.center" approved="yes">
+				<source>Center</source>
+				<target>Mitte</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.right" resname="tx_otirrebuttons_domain_model_button.right" approved="yes">
+				<source>Right</source>
+				<target>Rechts</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-left" approved="yes">
+				<source>Chevron Left</source>
+				<target>Chevron Links</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-right" approved="yes">
+				<source>Chevron Right</source>
+				<target>Chevron Rechts</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file" resname="tx_otirrebuttons_domain_model_button.icons.file" approved="yes">
+				<source>File</source>
+				<target>Datei</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file-pdf" resname="tx_otirrebuttons_domain_model_button.icons.file-pdf" approved="yes">
+				<source>PDF</source>
+				<target>PDF</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.download" resname="tx_otirrebuttons_domain_model_button.icons.download">
+				<source>Download</source>
+				<target>Download</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.paper-plane" resname="tx_otirrebuttons_domain_model_button.icons.paper-plane">
+				<source>Paper plane</source>
+				<target>Papierflugzeug</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

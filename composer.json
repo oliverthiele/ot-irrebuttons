@@ -1,0 +1,31 @@
+{
+	"name": "oliverthiele/ot-irrebuttons",
+	"type": "typo3-cms-extension",
+	"description": "Adds buttons to content elements with IRRE",
+	"homepage": "https://typo3.org",
+	"license": [
+		"GPL-2.0-or-later"
+	],
+	"authors": [
+		{
+			"name": "Oliver Thiele",
+			"email": "mail@oliver-thiele.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^11.5||^12.4"
+	},
+	"conflict": {
+	},
+	"autoload": {
+		"psr-4": {
+			"OliverThiele\\OtIrrebuttons\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ot_irrebuttons"
+		}
+	}
+}
