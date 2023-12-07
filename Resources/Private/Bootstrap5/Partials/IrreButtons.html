@@ -18,9 +18,6 @@
     <f:for each="{irreButtons}" as="buttonData" iteration="buttonIterator">
         <f:alias map="{button : buttonData.data}">
             <f:if condition="{button.icon}">
-
-                <f:variable name="iconIdentifier" value="{button.icon}" />
-
                 <f:switch expression="{button.icon}">
                     <f:case value="far-chevron-left">
                         <f:variable name="iconBeforeText" value="1"/>
@@ -39,12 +36,12 @@
                                     {f:if(condition: '{data.tx_otirrebuttons_button_size} !== \'\'', then: '{data.tx_otirrebuttons_button_size}')}
                                     {f:if(condition:'buttonMargin', then: ' {buttonMargin}')}">
                 <f:if condition="{button.text}">
-                    <f:if condition="{iconBeforeText} === 1">
-                        <f:render partial="Icon" arguments="{iconIdentifier : iconIdentifier}" section="Main"/>
+                    <f:if condition="{button.icon} !== '' && {iconBeforeText} === 1">
+                        <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
                     </f:if>
                     {button.text}
-                    <f:if condition="{iconAfterText} === 1">
-                        <f:render partial="Icon" arguments="{iconIdentifier : iconIdentifier}" section="Main"/>
+                    <f:if condition="{button.icon} !== '' && {iconAfterText} === 1">
+                        <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
                     </f:if>
                 </f:if>
             </f:link.typolink>
