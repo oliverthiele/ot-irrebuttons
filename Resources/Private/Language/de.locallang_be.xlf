@@ -79,6 +79,14 @@
 				<source>Chevron Right</source>
 				<target>Chevron Rechts</target>
 			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.bi-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.bi-chevron-left" approved="yes">
+				<source>Chevron Left</source>
+				<target>Chevron Links</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.bi-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.bi-chevron-right" approved="yes">
+				<source>Chevron Right</source>
+				<target>Chevron Rechts</target>
+			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file" resname="tx_otirrebuttons_domain_model_button.icons.file" approved="yes">
 				<source>File</source>
 				<target>Datei</target>
@@ -94,6 +102,10 @@
 			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.paper-plane" resname="tx_otirrebuttons_domain_model_button.icons.paper-plane">
 				<source>Paper plane</source>
 				<target>Papierflugzeug</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.send" resname="tx_otirrebuttons_domain_model_button.icons.send">
+				<source>Send</source>
+				<target>Senden</target>
 			</trans-unit>
 		</body>
 	</file>
