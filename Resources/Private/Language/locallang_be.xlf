@@ -40,6 +40,27 @@
 			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.label" resname="tx_otirrebuttons_domain_model_button.layout.label">
 				<source>Layout</source>
 			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.link" resname="tx_otirrebuttons_domain_model_button.layout.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.solid" resname="tx_otirrebuttons_domain_model_button.layout.group.solid">
+				<source>Solid</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.outline" resname="tx_otirrebuttons_domain_model_button.layout.group.outline">
+				<source>Outline</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.primary" resname="tx_otirrebuttons_domain_model_button.layout.primary">
+				<source>Primary</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.secondary" resname="tx_otirrebuttons_domain_model_button.layout.secondary">
+				<source>Secondary</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.light" resname="tx_otirrebuttons_domain_model_button.layout.light">
+				<source>Light</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.dark" resname="tx_otirrebuttons_domain_model_button.layout.dark">
+				<source>Dark</source>
+			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.position.label" resname="tx_otirrebuttons_domain_model_button.position.label">
 				<source>Position</source>
 			</trans-unit>
@@ -58,16 +79,10 @@
 			<trans-unit id="tx_otirrebuttons_domain_model_button.right" resname="tx_otirrebuttons_domain_model_button.right">
 				<source>Right</source>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-left">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.chevron-left">
 				<source>Chevron Left</source>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-right">
-				<source>Chevron Right</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.bi-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.bi-chevron-left">
-				<source>Chevron Left</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.bi-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.bi-chevron-right">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.chevron-right">
 				<source>Chevron Right</source>
 			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file" resname="tx_otirrebuttons_domain_model_button.icons.file">

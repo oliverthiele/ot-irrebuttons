@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Localization\LanguageServiceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 defined('TYPO3') or die();
@@ -16,9 +17,28 @@ $icons = [];
 if (isset($extensionSettings['icons']) && trim($extensionSettings['icons']) !== '') {
     $iconArray = explode(',', $extensionSettings['icons']);
     $icons[] = ['', ''];
+
+    $languageServiceFactory = GeneralUtility::makeInstance(
+        LanguageServiceFactory::class
+    );
+
+    $languageService = $languageServiceFactory->create('default');
+    $languageService->includeLLFile('EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf');
+
     foreach ($iconArray as $icon) {
         $icon = trim($icon);
-        $icons[$icon] = [$ll . 'tx_otirrebuttons_domain_model_button.icons.' . $icon, $icon];
+        $lll = $ll . 'tx_otirrebuttons_domain_model_button.icons.' . $icon;
+
+        $localizedString = $languageService->sL($lll);
+
+        // As access to the current BE user is not possible here,
+        // the system only checks whether there is an entry for the icon in the locallang.xlf file.
+        if ($localizedString === '') {
+            $localizedString = '[' . $icon . ']';
+        } else {
+            $localizedString = $lll;
+        }
+        $icons[$icon] = [$localizedString, $icon];
     }
 }
 
@@ -166,17 +186,17 @@ return [
                 'renderType' => 'selectSingle',
                 'items' => [
                     ['', ''],
-                    ['Link', 'btn btn-link'],
-                    ['Bootstrap Solid', '--div--'],
-                    ['Primary', 'btn btn-primary'],
-                    ['Secondary', 'btn btn-secondary'],
-                    ['Light', 'btn btn-light'],
-                    ['Dark', 'btn btn-dark'],
-                    ['Bootstrap Outline', '--div--'],
-                    ['Primary Outline', 'btn btn-outline-primary'],
-                    ['Secondary Outline', 'btn btn-outline-secondary'],
-                    ['Light Outline', 'btn btn-outline-light'],
-                    ['Dark Outline', 'btn btn-outline-dark'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.link', 'btn btn-link'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.group.solid', '--div--'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.primary', 'btn btn-primary'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.secondary', 'btn btn-secondary'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.light', 'btn btn-light'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.dark', 'btn btn-dark'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.group.outline', '--div--'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.primary', 'btn btn-outline-primary'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.secondary', 'btn btn-outline-secondary'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.light', 'btn btn-outline-light'],
+                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.dark', 'btn btn-outline-dark'],
                 ],
                 'size' => 1,
                 'maxitems' => 1,

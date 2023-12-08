@@ -47,6 +47,33 @@
 				<source>Layout</source>
 				<target>Layout</target>
 			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.link" resname="tx_otirrebuttons_domain_model_button.layout.link" approved="yes">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.solid" resname="tx_otirrebuttons_domain_model_button.layout.group.solid" approved="yes">
+				<source>Solid</source>
+				<target>Solide</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.outline" resname="tx_otirrebuttons_domain_model_button.layout.group.outline" approved="yes">
+				<source>Outline</source>
+				<target>Umriss</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.primary" resname="tx_otirrebuttons_domain_model_button.layout.primary" approved="yes">
+				<source>Primary</source>
+				<target>Primär</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.secondary" resname="tx_otirrebuttons_domain_model_button.layout.secondary" approved="yes">
+				<source>Secondary</source>
+				<target>Sekundär</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.light" resname="tx_otirrebuttons_domain_model_button.layout.light" approved="yes">
+				<source>Light</source>
+				<target>Hell</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.dark" resname="tx_otirrebuttons_domain_model_button.layout.dark" approved="yes">
+				<source>Dark</source>
+				<target>Dunkel</target>
+			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.position.label" resname="tx_otirrebuttons_domain_model_button.position.label" approved="yes">
 				<source>Position</source>
 				<target>Position</target>
@@ -71,19 +98,11 @@
 				<source>Right</source>
 				<target>Rechts</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-left" approved="yes">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.chevron-left" approved="yes">
 				<source>Chevron Left</source>
 				<target>Chevron Links</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.far-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.far-chevron-right" approved="yes">
-				<source>Chevron Right</source>
-				<target>Chevron Rechts</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.bi-chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.bi-chevron-left" approved="yes">
-				<source>Chevron Left</source>
-				<target>Chevron Links</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.bi-chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.bi-chevron-right" approved="yes">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.chevron-right" approved="yes">
 				<source>Chevron Right</source>
 				<target>Chevron Rechts</target>
 			</trans-unit>
