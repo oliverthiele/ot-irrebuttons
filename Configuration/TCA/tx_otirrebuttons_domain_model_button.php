@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Localization\LanguageServiceFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -17,28 +18,9 @@ $icons = [];
 if (isset($extensionSettings['icons']) && trim($extensionSettings['icons']) !== '') {
     $iconArray = explode(',', $extensionSettings['icons']);
     $icons[] = ['', ''];
-
-    $languageServiceFactory = GeneralUtility::makeInstance(
-        LanguageServiceFactory::class
-    );
-
-    $languageService = $languageServiceFactory->create('default');
-    $languageService->includeLLFile('EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf');
-
     foreach ($iconArray as $icon) {
         $icon = trim($icon);
-        $lll = $ll . 'tx_otirrebuttons_domain_model_button.icons.' . $icon;
-
-        $localizedString = $languageService->sL($lll);
-
-        // As access to the current BE user is not possible here,
-        // the system only checks whether there is an entry for the icon in the locallang.xlf file.
-        if ($localizedString === '') {
-            $localizedString = '[' . $icon . ']';
-        } else {
-            $localizedString = $lll;
-        }
-        $icons[$icon] = [$localizedString, $icon];
+        $icons[$icon] = [$icon, $icon];
     }
 }
 
