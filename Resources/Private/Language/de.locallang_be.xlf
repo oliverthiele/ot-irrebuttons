@@ -98,34 +98,6 @@
 				<source>Right</source>
 				<target>Rechts</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.chevron-left" approved="yes">
-				<source>Chevron Left</source>
-				<target>Chevron Links</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.chevron-right" approved="yes">
-				<source>Chevron Right</source>
-				<target>Chevron Rechts</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file" resname="tx_otirrebuttons_domain_model_button.icons.file" approved="yes">
-				<source>File</source>
-				<target>Datei</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file-pdf" resname="tx_otirrebuttons_domain_model_button.icons.file-pdf" approved="yes">
-				<source>PDF</source>
-				<target>PDF</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.download" resname="tx_otirrebuttons_domain_model_button.icons.download">
-				<source>Download</source>
-				<target>Download</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.paper-plane" resname="tx_otirrebuttons_domain_model_button.icons.paper-plane">
-				<source>Paper plane</source>
-				<target>Papierflugzeug</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.send" resname="tx_otirrebuttons_domain_model_button.icons.send">
-				<source>Send</source>
-				<target>Senden</target>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

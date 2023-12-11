@@ -2,4 +2,4 @@
 enableButtonsForCTypes = text
 
 # cat=General/others/b1; type=string; label=Icon Identifier: CSV list
-icons = bi-chevron-left, bi-chevron-right, download, file, file-pdf, send
+icons = bi-chevron-left, bi-chevron-right, bi-download, bi-file, bi-file-pdf, bi-send

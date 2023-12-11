@@ -79,27 +79,6 @@
 			<trans-unit id="tx_otirrebuttons_domain_model_button.right" resname="tx_otirrebuttons_domain_model_button.right">
 				<source>Right</source>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-left" resname="tx_otirrebuttons_domain_model_button.icons.chevron-left">
-				<source>Chevron Left</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.chevron-right" resname="tx_otirrebuttons_domain_model_button.icons.chevron-right">
-				<source>Chevron Right</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file" resname="tx_otirrebuttons_domain_model_button.icons.file">
-				<source>File</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.file-pdf" resname="tx_otirrebuttons_domain_model_button.icons.file-pdf">
-				<source>PDF</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.download" resname="tx_otirrebuttons_domain_model_button.icons.download">
-				<source>Download</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.paper-plane" resname="tx_otirrebuttons_domain_model_button.icons.paper-plane">
-				<source>Paper plane</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icons.send" resname="tx_otirrebuttons_domain_model_button.icons.send">
-				<source>Send</source>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>
