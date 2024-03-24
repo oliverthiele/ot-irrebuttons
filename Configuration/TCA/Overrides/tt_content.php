@@ -39,9 +39,18 @@ $tempColumns = [
             'type' => 'select',
             'renderType' => 'selectSingle',
             'items' => [
-                [$ll . 'tx_otirrebuttons_button_size.default', ''],
-                [$ll . 'tx_otirrebuttons_button_size.small', 'btn-sm'],
-                [$ll . 'tx_otirrebuttons_button_size.large', 'btn-lg'],
+                [
+                    'label' => $ll . 'tx_otirrebuttons_button_size.default',
+                    'value' => ''
+                ],
+                [
+                    'label' => $ll . 'tx_otirrebuttons_button_size.small',
+                    'value' => 'btn-sm'
+                ],
+                [
+                    'label' => $ll . 'tx_otirrebuttons_button_size.large',
+                    'value' => 'btn-lg'
+                ],
             ],
             'size' => 1,
             'maxitems' => 1,
