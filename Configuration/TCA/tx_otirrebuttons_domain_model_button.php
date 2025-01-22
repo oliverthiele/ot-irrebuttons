@@ -23,7 +23,8 @@ if (isset($extensionSettings['icons']) && trim($extensionSettings['icons']) !== 
         $icon = trim($icon);
         $icons[$icon] = [
             'label' => $icon,
-            'value' => $icon
+            'value' => $icon,
+            'icon' => 'ot-irrebuttons-icon-' . $icon
         ];
     }
 }
@@ -218,31 +219,6 @@ return [
                 'maxitems' => 1,
             ]
         ],
-        'position' => [
-            'exclude' => true,
-            'label' => $ll . 'tx_otirrebuttons_domain_model_button.position.label',
-            'l10n_mode' => 'exclude',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.left',
-                        'value' => 'left'
-                    ],
-                    [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.center',
-                        'value' => 'center'
-                    ],
-                    [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.right',
-                        'value' => 'right'
-                    ],
-                ],
-                'size' => 1,
-                'maxitems' => 1,
-            ]
-        ],
         'icon' => [
             'exclude' => true,
             'label' => $ll . 'tx_otirrebuttons_domain_model_button.icon.label',
@@ -269,12 +245,33 @@ return [
                         'value' => ''
                     ],
                     [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.left',
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.icon_position.left',
                         'value' => 'left'
                     ],
                     [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.right',
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.icon_position.right',
                         'value' => 'right'
+                    ],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+            ]
+        ],
+        'link_type' => [
+            'exclude' => true,
+            'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.label',
+            'l10n_mode' => 'exclude',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.default',
+                        'value' => ''
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.lightbox',
+                        'value' => 'lightbox'
                     ],
                 ],
                 'size' => 1,

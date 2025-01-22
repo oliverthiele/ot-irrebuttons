@@ -31,6 +31,26 @@
 				<source>Large</source>
 				<target>Groß</target>
 			</trans-unit>
+			<trans-unit id="tx_otirrebuttons.palette.label" resname="tx_otirrebuttons.palette.label">
+				<source>Configuration of buttons</source>
+				<target>Konfiguration der Buttons</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_position.label" resname="tx_otirrebuttons_button_position.label">
+				<source>Alignment of buttons</source>
+				<target>Ausrichtung der Buttons</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_position.start" resname="tx_otirrebuttons_button_position.start" approved="yes">
+				<source>Left (Start)</source>
+				<target>Links (Start)</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_position.center" resname="tx_otirrebuttons_button_position.center" approved="yes">
+				<source>Center</source>
+				<target>Mitte</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_button_position.end" resname="tx_otirrebuttons_button_position.end" approved="yes">
+				<source>Right (End)</source>
+				<target>Rechts (Ende)</target>
+			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label" approved="yes">
 				<source>Label</source>
 				<target>Beschriftung</target>
@@ -38,10 +58,6 @@
 			<trans-unit id="tx_otirrebuttons_domain_model_button.link.label" resname="tx_otirrebuttons_domain_model_button.link.label" approved="yes">
 				<source>Link</source>
 				<target>Link</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label" approved="yes">
-				<source>Text</source>
-				<target>Text</target>
 			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.label" resname="tx_otirrebuttons_domain_model_button.layout.label" approved="yes">
 				<source>Layout</source>
@@ -86,17 +102,25 @@
 				<source>Icon Position</source>
 				<target>Icon Position</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.left" resname="tx_otirrebuttons_domain_model_button.left" approved="yes">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.left" resname="tx_otirrebuttons_domain_model_button.icon_position.left">
 				<source>Left</source>
 				<target>Links</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.center" resname="tx_otirrebuttons_domain_model_button.center" approved="yes">
-				<source>Center</source>
-				<target>Mitte</target>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.right" resname="tx_otirrebuttons_domain_model_button.right" approved="yes">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.right" resname="tx_otirrebuttons_domain_model_button.icon_position.right">
 				<source>Right</source>
 				<target>Rechts</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.label" resname="tx_otirrebuttons_domain_model_button.link_type.label">
+				<source>Link Type</source>
+				<target>Link Typ</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.default" resname="tx_otirrebuttons_domain_model_button.link_type.default">
+				<source>Default</source>
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightbox" resname="tx_otirrebuttons_domain_model_button.link_type.lightbox">
+				<source>Lightbox</source>
+				<target>Lightbox</target>
 			</trans-unit>
 		</body>
 	</file>

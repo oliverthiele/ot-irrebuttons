@@ -2,4 +2,7 @@
 enableButtonsForCTypes = text
 
 # cat=General/others/b1; type=string; label=Icon Identifier: CSV list
-icons = bi-chevron-left, bi-chevron-right, bi-download, bi-file, bi-file-pdf, bi-send
+icons = chevron-left, chevron-right, download, file, file-pdf, send
+
+# cat=General/others/c1; type=string; label=Path to directory with icons:
+pathIcons = EXT:ot_febuild/Resources/Public/Assets/Website/SVG/regular/
