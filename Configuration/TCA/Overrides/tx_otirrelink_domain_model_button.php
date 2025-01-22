@@ -9,5 +9,11 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 ExtensionManagementUtility::addFieldsToPalette(
     'tx_otirrebuttons_domain_model_button',
     'irreButtons',
-    '--linebreak--, link, text, --linebreak--, layout, position, icon, icon_position'
+    '--linebreak--, link, link_type, text, --linebreak--, layout, icon, icon_position'
+);
+
+ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'irreButtonsConfig',
+    'tx_otirrebuttons_button_size, tx_otirrebuttons_button_position'
 );

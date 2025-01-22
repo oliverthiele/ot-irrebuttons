@@ -15,10 +15,17 @@ $icons = [];
 
 if (isset($extensionSettings['icons']) && trim($extensionSettings['icons']) !== '') {
     $iconArray = explode(',', $extensionSettings['icons']);
-    $icons[] = ['', ''];
+    $icons[] = [
+        'label' => '',
+        'value' => ''
+    ];
     foreach ($iconArray as $icon) {
         $icon = trim($icon);
-        $icons[$icon] = [$icon, $icon];
+        $icons[$icon] = [
+            'label' => $icon,
+            'value' => $icon,
+            'icon' => 'ot-irrebuttons-icon-' . $icon
+        ];
     }
 }
 
@@ -28,7 +35,6 @@ return [
         'label' => 'text',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'versioningWS' => true,
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
@@ -72,7 +78,10 @@ return [
                 'renderType' => 'selectSingle',
                 'default' => 0,
                 'items' => [
-                    ['', 0],
+                    [
+                        'label' => '',
+                        'value' => 0
+                    ],
                 ],
                 'foreign_table' => 'tx_otirrebuttons_domain_model_button',
                 'foreign_table_where' => 'AND {#tx_otirrebuttons_domain_model_button}.{#pid}=###CURRENT_PID### AND {#tx_otirrebuttons_domain_model_button}.{#sys_language_uid} IN (-1,0)',
@@ -81,6 +90,7 @@ return [
         'l10n_diffsource' => [
             'config' => [
                 'type' => 'passthrough',
+                'default' => '',
             ],
         ],
         'hidden' => [
@@ -91,8 +101,7 @@ return [
                 'renderType' => 'checkboxToggle',
                 'items' => [
                     [
-                        0 => '',
-                        1 => '',
+                        'label' => '',
                         'invertStateDisplay' => true
                     ]
                 ],
@@ -101,26 +110,21 @@ return [
         'starttime' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
+            'l10n_display' => 'defaultAsReadonly',
+            'l10n_mode' => 'exclude',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
+                'type' => 'datetime',
                 'default' => 0,
-                'behaviour' => [
-                    'allowLanguageSynchronization' => true
-                ]
             ],
         ],
         'endtime' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'eval' => 'datetime,int',
+                'type' => 'datetime',
                 'default' => 0,
                 'range' => [
-                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
+                    'upper' => 2145913200
                 ],
                 'behaviour' => [
                     'allowLanguageSynchronization' => true
@@ -142,18 +146,15 @@ return [
             'exclude' => true,
             'label' => $ll . 'tx_otirrebuttons_domain_model_button.link.label',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputLink',
+                'type' => 'link',
+                'required' => true,
                 'size' => '50',
                 'softref' => 'typolink',
-                'max' => '2048',
-                'eval' => 'trim',
-                'fieldControl' => [
-                    'linkPopup' => [
-                        'options' => [
-                            'title' => $ll . 'link_formlabel'
-                        ]
-                    ]
+                'appearance' => [
+                    'enableBrowser' => true,
+                    'browserTitle' => $ll . 'link_formlabel',
+//                    'allowedFileExtensions' => ['jpg', 'png', 'pdf'],
+//                    'allowedOptions' => ['params', 'rel'],
                 ]
             ]
         ],
@@ -165,34 +166,54 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', ''],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.link', 'btn btn-link'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.group.solid', '--div--'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.primary', 'btn btn-primary'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.secondary', 'btn btn-secondary'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.light', 'btn btn-light'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.dark', 'btn btn-dark'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.group.outline', '--div--'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.primary', 'btn btn-outline-primary'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.secondary', 'btn btn-outline-secondary'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.light', 'btn btn-outline-light'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.layout.dark', 'btn btn-outline-dark'],
-                ],
-                'size' => 1,
-                'maxitems' => 1,
-            ]
-        ],
-        'position' => [
-            'exclude' => true,
-            'label' => $ll . 'tx_otirrebuttons_domain_model_button.position.label',
-            'l10n_mode' => 'exclude',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'items' => [
-                    [$ll . 'tx_otirrebuttons_domain_model_button.left', 'left'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.center', 'center'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.right', 'right'],
+                    [
+                        'label' => '',
+                        'value' => ''
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.link',
+                        'value' => 'btn btn-link'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.group.solid',
+                        'value' => '--div--'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.primary',
+                        'value' => 'btn btn-primary'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.secondary',
+                        'value' => 'btn btn-secondary'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.light',
+                        'value' => 'btn btn-light'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.dark',
+                        'value' => 'btn btn-dark'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.group.outline',
+                        'value' => '--div--'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.primary',
+                        'value' => 'btn btn-outline-primary'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.secondary',
+                        'value' => 'btn btn-outline-secondary'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.light',
+                        'value' => 'btn btn-outline-light'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.layout.dark',
+                        'value' => 'btn btn-outline-dark'
+                    ],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
@@ -219,9 +240,39 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['', ''],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.left', 'left'],
-                    [$ll . 'tx_otirrebuttons_domain_model_button.right', 'right'],
+                    [
+                        'label' => '',
+                        'value' => ''
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.icon_position.left',
+                        'value' => 'left'
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.icon_position.right',
+                        'value' => 'right'
+                    ],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+            ]
+        ],
+        'link_type' => [
+            'exclude' => true,
+            'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.label',
+            'l10n_mode' => 'exclude',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.default',
+                        'value' => ''
+                    ],
+                    [
+                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.lightbox',
+                        'value' => 'lightbox'
+                    ],
                 ],
                 'size' => 1,
                 'maxitems' => 1,

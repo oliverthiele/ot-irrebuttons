@@ -26,32 +26,32 @@ class Button extends AbstractEntity
     /**
      * @var string
      */
-    protected $text = '';
+    protected string $text = '';
 
     /**
      * @var string
      */
-    protected $link = '';
+    protected string $link = '';
 
     /**
      * @var string
      */
-    protected $layout = '';
+    protected string $layout = '';
 
     /**
      * @var string
      */
-    protected $position = '';
+    protected string $position = '';
 
     /**
      * @var string
      */
-    protected $icon = '';
+    protected string $icon = '';
 
     /**
      * @var string
      */
-    protected $iconPosition = '';
+    protected string $iconPosition = '';
 
     /**
      * @return string

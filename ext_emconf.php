@@ -8,10 +8,10 @@ $EM_CONF[$_EXTKEY] = [
     'author_email' => 'mail@oliver-thiele.de',
     'author_company' => 'Web Development Oliver Thiele',
     'state' => 'stable',
-    'version' => '1.0.0',
+    'version' => '3.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.33-12.4.99'
+            'typo3' => '12.4.11-12.4.99'
         ],
         'conflicts' => [],
         'suggests' => [],
