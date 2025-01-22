@@ -41,11 +41,6 @@ class Button extends AbstractEntity
     /**
      * @var string
      */
-    protected string $position = '';
-
-    /**
-     * @var string
-     */
     protected string $icon = '';
 
     /**
@@ -99,22 +94,6 @@ class Button extends AbstractEntity
     public function setLayout(string $layout): void
     {
         $this->layout = $layout;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPosition(): string
-    {
-        return $this->position;
-    }
-
-    /**
-     * @param string $position
-     */
-    public function setPosition(string $position): void
-    {
-        $this->position = $position;
     }
 
     /**
