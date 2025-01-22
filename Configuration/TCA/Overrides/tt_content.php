@@ -55,7 +55,36 @@ $tempColumns = [
             'size' => 1,
             'maxitems' => 1,
         ]
-    ]
+    ],
+    'tx_otirrebuttons_button_position' => [
+        'exclude' => true,
+        'label' => $ll . 'tx_otirrebuttons_button_position.label',
+        'l10n_mode' => 'exclude',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                [
+                    'label' => '',
+                    'value' => ''
+                ],
+                [
+                    'label' => $ll . 'tx_otirrebuttons_button_position.start',
+                    'value' => 'start'
+                ],
+                [
+                    'label' => $ll . 'tx_otirrebuttons_button_position.center',
+                    'value' => 'center'
+                ],
+                [
+                    'label' => $ll . 'tx_otirrebuttons_button_position.end',
+                    'value' => 'end'
+                ],
+            ],
+            'size' => 1,
+            'maxitems' => 1,
+        ]
+    ],
 ];
 
 ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);
@@ -63,7 +92,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);
 if (isset($extensionSettings['enableButtonsForCTypes']) && $extensionSettings['enableButtonsForCTypes'] !== '') {
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        'tx_otirrebuttons_button_size, tx_otirrebuttons_domain_model_buttons',
+        '--palette--;' . $ll . 'tx_otirrebuttons.palette.label;irreButtonsConfig, tx_otirrebuttons_domain_model_buttons',
         $extensionSettings['enableButtonsForCTypes'],
         'after:bodytext'
     );
