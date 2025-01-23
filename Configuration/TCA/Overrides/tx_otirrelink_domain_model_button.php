@@ -11,9 +11,3 @@ ExtensionManagementUtility::addFieldsToPalette(
     'irreButtons',
     '--linebreak--, link, link_type, text, --linebreak--, layout, icon, icon_position'
 );
-
-ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'irreButtonsConfig',
-    'tx_otirrebuttons_button_size, tx_otirrebuttons_button_position'
-);
