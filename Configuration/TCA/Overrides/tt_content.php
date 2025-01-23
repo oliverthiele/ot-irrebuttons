@@ -12,6 +12,12 @@ $ll = 'LLL:EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf:';
 
 $extensionSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ot_irrebuttons');
 
+ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'irreButtonsConfig',
+    'tx_otirrebuttons_button_size, tx_otirrebuttons_button_position'
+);
+
 $tempColumns = [
     'tx_otirrebuttons_domain_model_buttons' => [
         'exclude' => 1,

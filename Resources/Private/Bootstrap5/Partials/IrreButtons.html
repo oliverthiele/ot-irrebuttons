@@ -23,7 +23,7 @@
         </f:defaultCase>
     </f:switch>
 
-    <f:if condition="{irreButtons -> f:count()} > 1">
+    <f:if condition="{irreButtons -> f:count()} >= 1">
         <f:variable name="divStart" value='<div class="d-grid gap-3 {alignmentClass}">'/>
         <f:variable name="divEnd" value='</div>'/>
         <f:variable name="buttonMargin" value=''/>
