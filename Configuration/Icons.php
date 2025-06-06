@@ -1,8 +1,8 @@
 <?php
+
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 $extensionSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ot_irrebuttons');
 
@@ -13,15 +13,18 @@ $icons = [
     ],
 ];
 
-$iconList = explode(',' , $extensionSettings['icons']);
+$iconList = explode(',', $extensionSettings['icons']);
 
 foreach ($iconList as $icon) {
     $iconIdentifier = trim($icon);
+    
+    $path = GeneralUtility::getFileAbsFileName($extensionSettings['pathIcons'] . $iconIdentifier . '.svg');
 
-    $icons['ot-irrebuttons-icon-' . $iconIdentifier] = [
-        'provider' => SvgIconProvider::class,
-        'source' => $extensionSettings['pathIcons'] . $iconIdentifier . '.svg',
-    ];
+    if (file_exists($path)) {
+        $icons['ot-irrebuttons-icon-' . $iconIdentifier] = [
+            'provider' => SvgIconProvider::class,
+            'source' => $extensionSettings['pathIcons'] . $iconIdentifier . '.svg',
+        ];
+    }
 }
-
 return $icons;

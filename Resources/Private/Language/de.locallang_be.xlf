@@ -31,11 +31,11 @@
 				<source>Large</source>
 				<target>Groß</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons.palette.label" resname="tx_otirrebuttons.palette.label">
+			<trans-unit id="tx_otirrebuttons.palette.label" resname="tx_otirrebuttons.palette.label" approved="yes">
 				<source>Configuration of buttons</source>
 				<target>Konfiguration der Buttons</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_position.label" resname="tx_otirrebuttons_button_position.label">
+			<trans-unit id="tx_otirrebuttons_button_position.label" resname="tx_otirrebuttons_button_position.label" approved="yes">
 				<source>Alignment of buttons</source>
 				<target>Ausrichtung der Buttons</target>
 			</trans-unit>
@@ -102,23 +102,23 @@
 				<source>Icon Position</source>
 				<target>Icon Position</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.left" resname="tx_otirrebuttons_domain_model_button.icon_position.left">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.left" resname="tx_otirrebuttons_domain_model_button.icon_position.left" approved="yes">
 				<source>Left</source>
 				<target>Links</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.right" resname="tx_otirrebuttons_domain_model_button.icon_position.right">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.right" resname="tx_otirrebuttons_domain_model_button.icon_position.right" approved="yes">
 				<source>Right</source>
 				<target>Rechts</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.label" resname="tx_otirrebuttons_domain_model_button.link_type.label">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.label" resname="tx_otirrebuttons_domain_model_button.link_type.label" approved="yes">
 				<source>Link Type</source>
 				<target>Link Typ</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.default" resname="tx_otirrebuttons_domain_model_button.link_type.default">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.default" resname="tx_otirrebuttons_domain_model_button.link_type.default" approved="yes">
 				<source>Default</source>
 				<target>Standard</target>
 			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightbox" resname="tx_otirrebuttons_domain_model_button.link_type.lightbox">
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightbox" resname="tx_otirrebuttons_domain_model_button.link_type.lightbox" approved="yes">
 				<source>Lightbox</source>
 				<target>Lightbox</target>
 			</trans-unit>

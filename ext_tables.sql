@@ -7,12 +7,12 @@ CREATE TABLE tt_content
 
 CREATE TABLE tx_otirrebuttons_domain_model_button
 (
-	parent_id     int(11)       default '0' not null,
-	parent_table  varchar(50)   default ''  not null,
-	text          varchar(100)  default '',
-	link          varchar(2048) default '',
-	link_type     varchar(30)   default '',
-	layout        varchar(100)  default '',
-	icon          varchar(50)   default '',
-	icon_position varchar(50)   default '',
+	parent_id     int(11)       default 0  not null,
+	parent_table  varchar(50)   default '' not null,
+	text          varchar(100)  default '' not null,
+	link          varchar(2048) default '' not null,
+	link_type     varchar(30)   default '' not null,
+	layout        varchar(100)  default '' not null,
+	icon          varchar(50)   default '' not null,
+	icon_position varchar(50)   default '' not null,
 );
