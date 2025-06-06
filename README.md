@@ -54,6 +54,11 @@ This can also be done in your own SitePackage. In the supplied _constants.typosc
 I use this constant to centrally adjust the path to the template files in my other extensions.
 If I change to a different framework at a later date, I can then change all template files in one place.
 
+TYPO3 Site Sets are supported in version **v3.1.0**. The constant
+projectSettings.framework.directory is no longer used; instead, sitekit.frameworks.frontend.directory is used.
+I use this constant in my various Sitekit extensions. To ensure that the old installations continue to
+work, I have not yet removed the constant `projectSettings.framework.directory`.
+
 ### Customization of the partial for icons
 
 The _Icon.html_ partial is used by default. The path must be overwritten in your own SitePackage!

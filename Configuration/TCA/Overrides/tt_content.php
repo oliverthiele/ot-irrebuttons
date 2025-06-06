@@ -14,7 +14,7 @@ $extensionSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)
 
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
-    'irreButtonsConfig',
+    'irreButtons',
     'tx_otirrebuttons_button_size, tx_otirrebuttons_button_position'
 );
 
@@ -98,7 +98,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);
 if (isset($extensionSettings['enableButtonsForCTypes']) && $extensionSettings['enableButtonsForCTypes'] !== '') {
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
-        '--palette--;' . $ll . 'tx_otirrebuttons.palette.label;irreButtonsConfig, tx_otirrebuttons_domain_model_buttons',
+        '--palette--;' . $ll . 'tx_otirrebuttons.palette.label;irreButtons, tx_otirrebuttons_domain_model_buttons',
         $extensionSettings['enableButtonsForCTypes'],
         'after:bodytext'
     );

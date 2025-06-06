@@ -56,6 +56,11 @@ ist _Bootstrap5_ voreingestellt. Mit dieser Konstante passe ich in meinen andere
 Template-Dateien an. Bei einem späteren Wechsel zu einem anderen Framework kann ich dann an einer Stelle alle
 Template-Dateien umstellen.
 
+Mit der Version **v3.1.0** werden die TYPO3 Site Sets unterstützt. Hier wird nicht mehr die Konstante
+projectSettings.framework.directory sondern sitekit.frameworks.frontend.directory genutzt.
+Diese Konstante setze ich bei meinen diversen Sitekit Extensions ein. Damit die alten Installationen weiterhin
+funktionieren, habe ich die Konstante `projectSettings.framework.directory`noch nicht entfernt.
+
 ### Anpassung des Partials für Icons
 
 Per Default wird das Partial _Icon.html_ verwendet. Der Pfad muss im eigenen SitePackage überschrieben werden!
