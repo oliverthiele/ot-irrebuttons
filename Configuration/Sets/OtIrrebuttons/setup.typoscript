@@ -2,7 +2,6 @@
 
 # Overwrite the old constant projectSettings.framework.directory to be compatible with the Sitekit extensions
 lib.contentElement {
-  test = 11
   templateRootPaths {
     15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Templates/
   }

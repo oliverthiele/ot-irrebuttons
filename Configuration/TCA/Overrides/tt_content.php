@@ -35,8 +35,8 @@ $tempColumns = [
                 'showAllLocalizationLink' => true,
                 'useSortable' => true,
                 'showPossibleLocalizationRecords' => true,
-            ]
-        ]
+            ],
+        ],
     ],
     'tx_otirrebuttons_button_size' => [
         'exclude' => 1,
@@ -47,20 +47,20 @@ $tempColumns = [
             'items' => [
                 [
                     'label' => $ll . 'tx_otirrebuttons_button_size.default',
-                    'value' => ''
+                    'value' => '',
                 ],
                 [
                     'label' => $ll . 'tx_otirrebuttons_button_size.small',
-                    'value' => 'btn-sm'
+                    'value' => 'btn-sm',
                 ],
                 [
                     'label' => $ll . 'tx_otirrebuttons_button_size.large',
-                    'value' => 'btn-lg'
+                    'value' => 'btn-lg',
                 ],
             ],
             'size' => 1,
             'maxitems' => 1,
-        ]
+        ],
     ],
     'tx_otirrebuttons_button_position' => [
         'exclude' => true,
@@ -72,24 +72,24 @@ $tempColumns = [
             'items' => [
                 [
                     'label' => '',
-                    'value' => ''
+                    'value' => '',
                 ],
                 [
                     'label' => $ll . 'tx_otirrebuttons_button_position.start',
-                    'value' => 'start'
+                    'value' => 'start',
                 ],
                 [
                     'label' => $ll . 'tx_otirrebuttons_button_position.center',
-                    'value' => 'center'
+                    'value' => 'center',
                 ],
                 [
                     'label' => $ll . 'tx_otirrebuttons_button_position.end',
-                    'value' => 'end'
+                    'value' => 'end',
                 ],
             ],
             'size' => 1,
             'maxitems' => 1,
-        ]
+        ],
     ],
 ];
 
@@ -102,4 +102,5 @@ if (isset($extensionSettings['enableButtonsForCTypes']) && $extensionSettings['e
         $extensionSettings['enableButtonsForCTypes'],
         'after:bodytext'
     );
+
 }

@@ -8,12 +8,12 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /***
  *
- * This file is part of the "FSB Job Offers" Extension for TYPO3 CMS.
+ * This file is part of the "IRRE Button" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2024 Oliver Thiele <mail@oliver-thiele.de>, Web Development Oliver Thiele
+ *  (c) 2024-2025 Oliver Thiele <mail@oliver-thiele.de>, Web Development Oliver Thiele
  *
  ***/
 
@@ -22,7 +22,6 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  */
 class Button extends AbstractEntity
 {
-
     /**
      * @var string
      */
