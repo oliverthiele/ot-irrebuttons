@@ -17,7 +17,7 @@ $iconList = explode(',', $extensionSettings['icons']);
 
 foreach ($iconList as $icon) {
     $iconIdentifier = trim($icon);
-    
+
     $path = GeneralUtility::getFileAbsFileName($extensionSettings['pathIcons'] . $iconIdentifier . '.svg');
 
     if (file_exists($path)) {
