@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['ot_irrebuttons'] = [
     'title' => 'IRRE Buttons',
     'description' => 'Adds buttons to content elements with IRRE',
     'category' => 'fe',
