@@ -153,8 +153,8 @@ return [
                 'appearance' => [
                     'enableBrowser' => true,
                     'browserTitle' => $ll . 'link_formlabel',
-                    //                    'allowedFileExtensions' => ['jpg', 'png', 'pdf'],
-                    //                    'allowedOptions' => ['params', 'rel'],
+                    // 'allowedFileExtensions' => ['jpg', 'png', 'pdf'],
+                    // 'allowedOptions' => ['params', 'rel'],
                 ],
             ],
         ],
