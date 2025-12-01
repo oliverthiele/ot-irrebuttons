@@ -45,6 +45,19 @@
                 <f:switch expression="{button.link_type}">
                     <f:case value="lightbox">
                         <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
+
+                        <f:if condition="{f:startsWith(search: 't3://page', subject: button.link)}">
+                            <f:variable name="additionalAttributes"
+                                        value="{'role' : 'button', 'data-fancybox': '', data-type: 'iframe'}"/>
+                        </f:if>
+                        <f:if condition="{f:startsWith(search: 'http', subject: button.link)}">
+                            <f:variable name="additionalAttributes"
+                                        value="{'role' : 'button', 'data-fancybox': '', data-type: 'iframe'}"/>
+                        </f:if>
+
+                        <f:if condition="{f:startsWith(search: 't3://file', subject: button.link)}">
+                            <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
+                        </f:if>
                     </f:case>
                     <f:defaultCase>
                         <f:variable name="additionalAttributes" value="{'role' : 'button'}"/>
@@ -80,9 +93,17 @@
                 </f:if>
 
                 <f:link.typolink parameter="{button.link}" additionalAttributes="{additionalAttributes}"
-                                 class="btn {f:if(condition: '{button.layout}', then: ' {button.layout}', else: ' btn-link')}
-                                        {f:if(condition: '{data.tx_otirrebuttons_button_size} !== \'\'', then: '{data.tx_otirrebuttons_button_size}')}
-                                        {f:if(condition:'buttonMargin', then: ' {buttonMargin}')}">
+                                 class="btn me-md-2
+                                 {f:if(
+                                    condition: '{button.layout}',
+                                    then: ' {button.layout}',
+                                    else: ' btn-link'
+                                 )}
+                                 {f:if(
+                                    condition: '{data.tx_otirrebuttons_button_size} !== \'\'',
+                                    then: '{data.tx_otirrebuttons_button_size}'
+                                 )}
+                                 {f:if(condition:'buttonMargin', then: ' {buttonMargin}')}">
                     <f:if condition="{button.text}">
                         <f:if condition="{button.icon} != '' && {iconBeforeText} == 1">
                             <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
