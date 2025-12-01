@@ -1,8 +1,8 @@
-# cat=General/others/a1; type=string; label=CTypes with IRRE Buttons: Enable IRRE Buttons for CTypes. (CSV)
+# cat=General/others/a1; type=string; label=CTypes with IRRE Buttons: Enable IRRE Buttons for a list of CTypes (Default: "text")
 enableButtonsForCTypes = text
 
-# cat=General/others/b1; type=string; label=Icon Identifier: CSV list
-icons = chevron-left, chevron-right, download, file, file-pdf, send
+# cat=General/others/b1; type=string; label=Icon Identifier:List of Icon Identifier (Default: "chevron-left, chevron-right, download, file, file-pdf, paper-plane, arrow-up-right-from-square")
+icons = chevron-left, chevron-right, download, file, file-pdf, paper-plane, arrow-up-right-from-square
 
-# cat=General/others/c1; type=string; label=Path to directory with icons:Example: EXT:ot_febuild/Resources/Public/Assets/Website/SVG/regular/
+# cat=General/others/c1; type=string; label=Path to directory with icons:Example: EXT:ot_febuild/Resources/Public/Assets/Website/SVG/solid/
 pathIcons =
