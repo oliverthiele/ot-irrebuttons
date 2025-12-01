@@ -8,84 +8,95 @@
 <body>
 
 <f:section name="Main">
-    <f:switch expression="{data.tx_otirrebuttons_button_position}">
-        <f:case value="start">
-            <f:variable name="alignmentClass" value="d-md-flex justify-content-md-start"/>
-        </f:case>
-        <f:case value="center">
-            <f:variable name="alignmentClass" value="d-md-flex justify-content-md-center"/>
-        </f:case>
-        <f:case value="end">
-            <f:variable name="alignmentClass" value="d-md-flex justify-content-md-end"/>
-        </f:case>
-        <f:defaultCase>
-            <f:variable name="alignmentClass" value="d-md-block"/>
-        </f:defaultCase>
-    </f:switch>
+    <f:spaceless>
+        <f:switch expression="{data.tx_otirrebuttons_button_position}">
+            <f:case value="start">
+                <f:variable name="alignmentClass" value="d-md-flex justify-content-md-start"/>
+            </f:case>
+            <f:case value="center">
+                <f:variable name="alignmentClass" value="d-md-flex justify-content-md-center"/>
+            </f:case>
+            <f:case value="end">
+                <f:variable name="alignmentClass" value="d-md-flex justify-content-md-end"/>
+            </f:case>
+            <f:defaultCase>
+                <f:variable name="alignmentClass" value="d-md-block"/>
+            </f:defaultCase>
+        </f:switch>
 
-    <f:if condition="{irreButtons -> f:count()} >= 1">
-        <f:variable name="divStart" value='<div class="d-grid gap-3 {alignmentClass}">'/>
-        <f:variable name="divEnd" value='</div>'/>
-        <f:variable name="buttonMargin" value=''/>
-    </f:if>
-    {divStart -> f:format.raw()}
-    <f:for each="{irreButtons}" as="buttonData" iteration="buttonIterator">
-        <f:alias map="{button : buttonData.data}">
+        <f:if condition="{settings.sitekit.gutterSize}">
+            <f:then>
+                <f:variable name="gutterSize" value="{settings.sitekit.gutterSize}"/>
+            </f:then>
+            <f:else>
+                <f:variable name="gutterSize" value="3"/>
+            </f:else>
+        </f:if>
 
-            <f:switch expression="{button.link_type}">
-                <f:case value="lightbox">
-                    <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
-                </f:case>
-                <f:defaultCase>
-                    <f:variable name="additionalAttributes" value="{'role' : 'button'}"/>
-                </f:defaultCase>
-            </f:switch>
+        <f:if condition="{irreButtons -> f:count()} >= 1">
+            <f:variable name="divStart" value='<div class="d-grid gap-{gutterSize} {alignmentClass}">'/>
+            <f:variable name="divEnd" value='</div>'/>
+            <f:variable name="buttonMargin" value=''/>
+        </f:if>
+        {divStart -> f:format.raw()}
+        <f:for each="{irreButtons}" as="buttonData" iteration="buttonIterator">
+            <f:alias map="{button : buttonData.data}">
 
-
-            <f:if condition="{button.icon}">
-                <f:switch expression="{button.icon_position}">
-                    <f:case value="left">
-                        <f:variable name="iconBeforeText" value="1"/>
-                        <f:variable name="iconAfterText" value="0"/>
-                    </f:case>
-                    <f:case value="right">
-                        <f:variable name="iconBeforeText" value="0"/>
-                        <f:variable name="iconAfterText" value="1"/>
+                <f:switch expression="{button.link_type}">
+                    <f:case value="lightbox">
+                        <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
                     </f:case>
                     <f:defaultCase>
-                        <f:switch expression="{button.icon}">
-                            <f:case value="chevron-left">
-                                <f:variable name="iconBeforeText" value="1"/>
-                                <f:variable name="iconAfterText" value="0"/>
-                                <f:variable name="iconAdditionalCss" value="me-1"/>
-                            </f:case>
-                            <f:defaultCase>
-                                <f:variable name="iconBeforeText" value="0"/>
-                                <f:variable name="iconAfterText" value="1"/>
-                                <f:variable name="iconAdditionalCss" value="ms-1"/>
-                            </f:defaultCase>
-                        </f:switch>
+                        <f:variable name="additionalAttributes" value="{'role' : 'button'}"/>
                     </f:defaultCase>
                 </f:switch>
-            </f:if>
 
-            <f:link.typolink parameter="{button.link}" additionalAttributes="{additionalAttributes}"
-                             class="btn {f:if(condition: '{button.layout}', then: ' {button.layout}', else: ' btn-link')}
-                                    {f:if(condition: '{data.tx_otirrebuttons_button_size} !== \'\'', then: '{data.tx_otirrebuttons_button_size}')}
-                                    {f:if(condition:'buttonMargin', then: ' {buttonMargin}')}">
-                <f:if condition="{button.text}">
-                    <f:if condition="{button.icon} != '' && {iconBeforeText} == 1">
-                        <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
-                    </f:if>
-                    {button.text}
-                    <f:if condition="{button.icon} != '' && {iconAfterText} == 1">
-                        <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
-                    </f:if>
+
+                <f:if condition="{button.icon}">
+                    <f:switch expression="{button.icon_position}">
+                        <f:case value="left">
+                            <f:variable name="iconBeforeText" value="1"/>
+                            <f:variable name="iconAfterText" value="0"/>
+                        </f:case>
+                        <f:case value="right">
+                            <f:variable name="iconBeforeText" value="0"/>
+                            <f:variable name="iconAfterText" value="1"/>
+                        </f:case>
+                        <f:defaultCase>
+                            <f:switch expression="{button.icon}">
+                                <f:case value="chevron-left">
+                                    <f:variable name="iconBeforeText" value="1"/>
+                                    <f:variable name="iconAfterText" value="0"/>
+                                    <f:variable name="iconAdditionalCss" value="me-1"/>
+                                </f:case>
+                                <f:defaultCase>
+                                    <f:variable name="iconBeforeText" value="0"/>
+                                    <f:variable name="iconAfterText" value="1"/>
+                                    <f:variable name="iconAdditionalCss" value="ms-1"/>
+                                </f:defaultCase>
+                            </f:switch>
+                        </f:defaultCase>
+                    </f:switch>
                 </f:if>
-            </f:link.typolink>
-        </f:alias>
-    </f:for>
-    {divEnd -> f:format.raw()}
+
+                <f:link.typolink parameter="{button.link}" additionalAttributes="{additionalAttributes}"
+                                 class="btn {f:if(condition: '{button.layout}', then: ' {button.layout}', else: ' btn-link')}
+                                        {f:if(condition: '{data.tx_otirrebuttons_button_size} !== \'\'', then: '{data.tx_otirrebuttons_button_size}')}
+                                        {f:if(condition:'buttonMargin', then: ' {buttonMargin}')}">
+                    <f:if condition="{button.text}">
+                        <f:if condition="{button.icon} != '' && {iconBeforeText} == 1">
+                            <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
+                        </f:if>
+                        {button.text}
+                        <f:if condition="{button.icon} != '' && {iconAfterText} == 1">
+                            <f:render partial="Icon" arguments="{iconIdentifier : button.icon}" section="Main"/>
+                        </f:if>
+                    </f:if>
+                </f:link.typolink>
+            </f:alias>
+        </f:for>
+        {divEnd -> f:format.raw()}
+    </f:spaceless>
 </f:section>
 
 </body>
