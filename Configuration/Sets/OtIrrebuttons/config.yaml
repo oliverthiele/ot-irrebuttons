@@ -1,4 +1,3 @@
 name: oliverthiele/ot-irrebuttons
-label: 'Extension IRRE Buttons'
 dependencies:
   - typo3/fluid-styled-content

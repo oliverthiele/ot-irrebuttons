@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file source-language="en" datatype="plaintext"
+		  original="EXT:ot_irrebuttons/Configuration/Sets/OtIrrebuttons/labels.xlf"
+		  date="2025-10-16T11:06:00Z" product-name="ot-irrebuttons">
+		<header/>
+		<body>
+			<trans-unit id="label" resname="label">
+				<source>Extension IRRE Buttons</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
