@@ -8,7 +8,6 @@ services:
     resource: '../Classes/*'
 
   OliverThiele\OtIrrebuttons\DataProcessing\IrreButtonsProcessor:
-    public: true
     tags:
       - name: 'data.processor'
         identifier: 'ot-irrebuttons-processor'

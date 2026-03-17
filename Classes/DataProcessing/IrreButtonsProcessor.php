@@ -58,7 +58,7 @@ final class IrreButtonsProcessor implements DataProcessorInterface
 
         $queryBuilder = $this->connectionPool->getQueryBuilderForTable('tx_otirrebuttons_domain_model_button');
 
-        $buttons = $queryBuilder
+        $rows = $queryBuilder
             ->select('*')
             ->from('tx_otirrebuttons_domain_model_button')
             ->where(
@@ -70,6 +70,10 @@ final class IrreButtonsProcessor implements DataProcessorInterface
             ->orderBy('sorting', 'ASC')
             ->executeQuery()
             ->fetchAllAssociative();
+
+        // Wrap each row in ['data' => $row] to match the structure expected by the Fluid partial
+        // (same convention as TYPO3's DatabaseQueryProcessor)
+        $buttons = array_map(static fn(array $row): array => ['data' => $row], $rows);
 
         $targetVariableName = (string)$cObj->stdWrapValue('as', $processorConfiguration, 'irreButtons');
         $processedData[$targetVariableName] = $buttons;
