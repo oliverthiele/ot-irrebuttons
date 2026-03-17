@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.7] — 2026-03-17
+
+### Fixed
+- DataProcessor registration in `Services.yaml` — replaced incorrect Symfony `alias:`
+  with the TYPO3-native `data.processor` tag and `identifier: ot-irrebuttons-processor`
+
 ## [3.2.6] — 2026-03-17
 
 ### Added
@@ -99,7 +105,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.6...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.7...HEAD
+[3.2.7]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.6...v3.2.7
 [3.2.6]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.5...v3.2.6
 [3.2.5]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.4...v3.2.5
 [3.2.4]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.3...v3.2.4

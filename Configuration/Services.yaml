@@ -9,4 +9,6 @@ services:
 
   OliverThiele\OtIrrebuttons\DataProcessing\IrreButtonsProcessor:
     public: true
-    alias: ot-irrebuttons-processor
+    tags:
+      - name: 'data.processor'
+        identifier: 'ot-irrebuttons-processor'
