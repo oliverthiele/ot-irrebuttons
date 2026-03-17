@@ -12,16 +12,7 @@ lib.contentElement {
   }
 
   dataProcessing {
-    1701706720 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-    1701706720 {
-      if.isTrue.field = tx_otirrebuttons_domain_model_buttons
-      table = tx_otirrebuttons_domain_model_button
-      where.data = field:_ORIG_uid // field:uid
-      where.intval = 1
-      where.wrap = tx_otirrebuttons_domain_model_button.parent_id=|
-
-      orderBy = sorting
-      as = irreButtons
-    }
+    1701706720 = ot-irrebuttons-processor
+    1701706720.if.isTrue.field = tx_otirrebuttons_domain_model_buttons
   }
 }
