@@ -7,12 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.6] — 2026-03-17
+
 ### Added
 - Custom `IrreButtonsProcessor` DataProcessor — queries buttons by `parent_id` only,
   without any page (pid) restriction, ensuring correct rendering when content is
   inherited via TYPO3 Slide
 - `Services.yaml` with DI configuration and alias `ot-irrebuttons-processor`
 - `phpstan.neon.dist` at level 9
+
+### Changed
+- Updated `README.md` — English-only, Packagist badges, structured sections
+- Replaced `README_DE.md` with `CHANGELOG.md`
 
 ## [3.2.5] — 2026-01-19
 
@@ -93,7 +99,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.5...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.6...HEAD
+[3.2.6]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.5...v3.2.6
 [3.2.5]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.4...v3.2.5
 [3.2.4]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.3...v3.2.4
 [3.2.3]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.2...v3.2.3
