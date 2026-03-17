@@ -1,82 +1,94 @@
-# TYPO3 Extension ot-irrebuttons
+# IRRE Buttons — Adds manageable buttons to TYPO3 content elements
 
-This extension adds database fields to the tt_content table in TYPO3,
-which enables the output of buttons without having to add them to the RTE.
+Extends `tt_content` with IRRE-managed button records — buttons are configured
+directly in the backend without touching the RTE.
 
-Advantages:
+[![TYPO3](https://img.shields.io/badge/TYPO3-12.4%20%7C%2013.4-orange.svg)](https://typo3.org/)
+[![Packagist Version](https://img.shields.io/packagist/v/oliverthiele/ot-irrebuttons.svg)](https://packagist.org/packages/oliverthiele/ot-irrebuttons)
+[![PHP](https://img.shields.io/packagist/dependency-v/oliverthiele/ot-irrebuttons/php.svg)](https://php.net/)
+[![License](https://img.shields.io/packagist/l/oliverthiele/ot-irrebuttons.svg)](LICENSE)
+[![Changelog](https://img.shields.io/badge/Changelog-CHANGELOG.md-blue.svg)](CHANGELOG.md)
 
-- Central control of the button layout
-- Icons in the button are easy to implement
-- Configurable for different CTypes
+## Features
+
+- Buttons are managed as IRRE child records — no RTE markup required
+- Central control over button layout (style, size, position)
+- Optional icon support via a configurable list of icon identifiers
+- Icon partial can be overridden per project (Bootstrap Icons, FontAwesome, SVG sprites, …)
+- Configurable per CType via extension settings
+- Fancybox link type support
+- Compatible with TYPO3 content Slide (records from parent pages render correctly)
+- SiteSet support via `sitekit.frameworks.frontend.directory`
+
+## Requirements
+
+| Dependency | Version      |
+|------------|-------------|
+| TYPO3      | 12.4 / 13.4 |
+| PHP        | 8.1+        |
 
 ## Installation
 
-```shell
-composer req oliverthiele/ot-irrebuttons
+```bash
+composer require oliverthiele/ot-irrebuttons
 ```
 
 ## Configuration
 
-### Customization of the extension settings
+### Extension Settings
 
-#### CTypes
+Open **Admin Tools → Settings → Extension Configuration → ot_irrebuttons**.
 
-The CTypes for which the buttons are to be displayed can be configured in the extension settings.
+| Setting                  | Description                                          |
+|--------------------------|------------------------------------------------------|
+| CTypes with IRRE Buttons | Comma-separated list of CTypes that show the buttons |
+| Icons                    | Comma-separated list of icon identifiers             |
 
-**(Admin Tools -> Settings -> Extension Configuration -> ot_irrebuttons -> CTypes with IRRE Buttons)**
+For each configured CType the corresponding Fluid template from
+`EXT:fluid_styled_content` must be overridden in your SitePackage.
+A ready-to-use example is included for CType `text`.
 
-For each CType, the corresponding FluidTemplate from EXT:fluid_styled_content must then also be overwritten in its own
-SitePackage. An example is provided for CType "text".
+### TypoScript / SiteSet
 
-The following HTML code must then be added:
+The extension ships a SiteSet (`OtIrrebuttons`). Include it as a dependency in
+your site's SiteSet configuration — no manual TypoScript include required.
 
-```html
-<f:if condition="{irreButtons}">
-    <f:render partial="IrreButtons" section="Main" arguments="{data : data, irreButtons : irreButtons}"/>
-</f:if>
-```
+The template path constant `sitekit.frameworks.frontend.directory` (default:
+`Bootstrap5`) is provided by the SiteSet. Change the value in your site
+configuration if your project uses a different frontend framework directory.
 
-#### Icons
+> The legacy constant `projectSettings.framework.directory` is still evaluated
+> for backwards compatibility with installations that do not use SiteSets.
 
-The icon identifiers can be specified here as a comma-separated list.
+### Icon Partial
 
-As an example, a few [Bootstrap Icons](https://icons.getbootstrap.com/) are preset here:
+The partial `IrreButtons/Icon.html` renders the icon identifier as plain text by
+default. Override the partial path in your SitePackage to adapt it to your icon
+set:
 
-`bi-chevron-left, bi-chevron-right, bi-download, bi-file, bi-file-pdf, bi-send`.
-
-The icon identifiers are then output in the partial _EXT:ot_irrebuttons/Resources/Private/Bootstrap5/Partials/Icon.html_.
-This partial can be overwritten in your own SitePackage so that SVG sprites, for example, can also be implemented.
-
-### TypoScript
-
-The constant `projectSettings.framework.directory` must be set in the TypoScript.
-This can also be done in your own SitePackage. In the supplied _constants.typoscript_ file the preset is _Bootstrap5_.
-I use this constant to centrally adjust the path to the template files in my other extensions.
-If I change to a different framework at a later date, I can then change all template files in one place.
-
-TYPO3 Site Sets are supported in version **v3.1.0**. The constant
-projectSettings.framework.directory is no longer used; instead, sitekit.frameworks.frontend.directory is used.
-I use this constant in my various Sitekit extensions. To ensure that the old installations continue to
-work, I have not yet removed the constant `projectSettings.framework.directory`.
-
-### Customization of the partial for icons
-
-The _Icon.html_ partial is used by default. The path must be overwritten in your own SitePackage!
-Depending on the icon set used (e.g. Bootstrap Icons, FontAwesome, own ViewHelper, ...) this file must be
-adapted differently. For this purpose, an additional path to the FluidTemplate files can be specified in the TypoScript:
-
-Example:
-
-```typo3_typoscript
+```typoscript
 lib.contentElement {
-    templateRootPaths {
-        40 = EXT:my_sitepackage/Resources/Private/Content/Templates/
-    }
     partialRootPaths {
         40 = EXT:my_sitepackage/Resources/Private/Content/Partials/
     }
-    layoutRootPaths {
-        40 = EXT:my_sitepackage/Resources/Private/Content/Layouts/
-    }
 }
 ```
+
+## Usage
+
+Add the following snippet to any Fluid template where buttons should appear:
+
+```html
+<f:if condition="{irreButtons}">
+    <f:render partial="IrreButtons" section="Main"
+              arguments="{data: data, irreButtons: irreButtons}"/>
+</f:if>
+```
+
+The variable `irreButtons` is populated automatically by the included
+DataProcessor for every CType listed in the extension settings.
+
+## License / Author
+
+GPL-2.0-or-later
+© [Oliver Thiele](https://www.oliver-thiele.de)
