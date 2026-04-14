@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.9] — 2026-04-14
+
+### Fixed
+- Prevent "Undefined array key" PHP 8.x warning for `_ORIG_uid` in `IrreButtonsProcessor`
+  — key is only present in workspace overlays, added `isset()` guard before `is_int()` check
+
 ## [3.2.8] — 2026-03-17
 
 ### Fixed
@@ -113,7 +119,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.8...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...HEAD
+[3.2.9]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.8...v3.2.9
 [3.2.8]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.7...v3.2.8
 [3.2.7]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.6...v3.2.7
 [3.2.6]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.5...v3.2.6

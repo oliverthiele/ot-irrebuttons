@@ -48,7 +48,7 @@ final class IrreButtonsProcessor implements DataProcessorInterface
         // Respect versioning overlay: _ORIG_uid holds the live UID when in workspace
         /** @var array<string, mixed> $contentElementData */
         $contentElementData = $processedData['data'];
-        $origUid = is_int($contentElementData['_ORIG_uid']) ? $contentElementData['_ORIG_uid'] : 0;
+        $origUid = isset($contentElementData['_ORIG_uid']) && is_int($contentElementData['_ORIG_uid']) ? $contentElementData['_ORIG_uid'] : 0;
         $uid = is_int($contentElementData['uid']) ? $contentElementData['uid'] : 0;
         $contentElementUid = $origUid !== 0 ? $origUid : $uid;
 
