@@ -3,7 +3,7 @@
 Extends `tt_content` with IRRE-managed button records — buttons are configured
 directly in the backend without touching the RTE.
 
-[![TYPO3](https://img.shields.io/badge/TYPO3-12.4%20%7C%2013.4-orange.svg)](https://typo3.org/)
+[![TYPO3](https://img.shields.io/badge/TYPO3-13.4%20%7C%2014.3-orange.svg)](https://typo3.org/)
 [![Packagist Version](https://img.shields.io/packagist/v/oliverthiele/ot-irrebuttons.svg)](https://packagist.org/packages/oliverthiele/ot-irrebuttons)
 [![PHP](https://img.shields.io/packagist/dependency-v/oliverthiele/ot-irrebuttons/php.svg)](https://php.net/)
 [![License](https://img.shields.io/packagist/l/oliverthiele/ot-irrebuttons.svg)](LICENSE)
@@ -14,18 +14,20 @@ directly in the backend without touching the RTE.
 - Buttons are managed as IRRE child records — no RTE markup required
 - Central control over button layout (style, size, position)
 - Optional icon support via a configurable list of icon identifiers
-- Icon partial can be overridden per project (Bootstrap Icons, FontAwesome, SVG sprites, …)
+- Icon partial can be overridden per project (Bootstrap Icons, FontAwesome, SVG
+  sprites, …)
 - Configurable per CType via extension settings
 - Fancybox link type support
-- Compatible with TYPO3 content Slide (records from parent pages render correctly)
+- Compatible with TYPO3 content Slide (records from parent pages render
+  correctly)
 - SiteSet support via `sitekit.frameworks.frontend.directory`
 
 ## Requirements
 
-| Dependency | Version      |
-|------------|-------------|
-| TYPO3      | 12.4 / 13.4 |
-| PHP        | 8.1+        |
+| Dependency | Version        |
+|------------|----------------|
+| TYPO3      | ^13.4 \| ^14.3 |
+| PHP        | >=8.3          |
 
 ## Installation
 
@@ -79,6 +81,7 @@ lib.contentElement {
 Add the following snippet to any Fluid template where buttons should appear:
 
 ```html
+
 <f:if condition="{irreButtons}">
     <f:render partial="IrreButtons" section="Main"
               arguments="{data: data, irreButtons: irreButtons}"/>
