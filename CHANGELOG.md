@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.0] — 2026-04-25
+
+### Added
+
+- TYPO3 v14.3 support (`^13.4||^14.3`)
+- `searchable: false` on `starttime`, `endtime`, and `link` TCA fields
+
+### Changed
+
+- Raise PHP minimum constraint to `>=8.3`
+- Drop TYPO3 v12 support
+
+---
+
 ## [3.2.9] — 2026-04-14
 
 ### Fixed
@@ -119,7 +133,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...v4.0.0
 [3.2.9]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.8...v3.2.9
 [3.2.8]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.7...v3.2.8
 [3.2.7]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.6...v3.2.7

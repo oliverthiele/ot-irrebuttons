@@ -115,6 +115,7 @@ return [
             'config' => [
                 'type' => 'datetime',
                 'default' => 0,
+                'searchable' => false,
             ],
         ],
         'endtime' => [
@@ -129,6 +130,7 @@ return [
                 'behaviour' => [
                     'allowLanguageSynchronization' => true,
                 ],
+                'searchable' => false,
             ],
         ],
         'text' => [
@@ -150,6 +152,7 @@ return [
                 'required' => true,
                 'size' => '50',
                 'softref' => 'typolink',
+                'searchable' => false,
                 'appearance' => [
                     'enableBrowser' => true,
                     'browserTitle' => $ll . 'link_formlabel',
