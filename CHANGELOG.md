@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.1] — 2026-04-25
+
+### Fixed
+
+- `ext_emconf.php`: remove title prefix from `description` field to prevent
+  "Extension Title missing" warning in TYPO3 v14 backend
+
+---
+
 ## [4.0.0] — 2026-04-25
 
 ### Added
@@ -133,7 +142,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.1...HEAD
+[4.0.1]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...v4.0.0
 [3.2.9]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.8...v3.2.9
 [3.2.8]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.7...v3.2.8
