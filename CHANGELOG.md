@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.2] — 2026-06-17
+
+### Fixed
+
+- Use `_LOCALIZED_UID` in `IrreButtonsProcessor` so translated content elements
+  load their own IRRE button records instead of the default language buttons
+
+---
+
 ## [4.0.1] — 2026-04-25
 
 ### Fixed
@@ -142,7 +151,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.1...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.2...HEAD
+[4.0.2]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...v4.0.0
 [3.2.9]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.8...v3.2.9
