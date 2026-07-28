@@ -21,6 +21,10 @@
 	"require-dev": {
 		"roave/security-advisories": "dev-latest"
 	},
+	"suggest": {
+		"oliverthiele/ot-icons": "Icon rendering via Fluid ViewHelper for the button icon field",
+		"oliverthiele/ot-iconselector": "Visual icon selector with AJAX search and SVG preview for the button icon field"
+	},
 	"conflict": {
 	},
 	"autoload": {
@@ -30,7 +34,7 @@
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-main": "4.0.x-dev"
+			"dev-main": "4.1.x-dev"
 		},
 		"typo3/cms": {
 			"extension-key": "ot_irrebuttons"

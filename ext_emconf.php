@@ -8,12 +8,15 @@ $EM_CONF['ot_irrebuttons'] = [
     'author_email' => 'mail@oliver-thiele.de',
     'author_company' => 'Web Development Oliver Thiele',
     'state' => 'stable',
-    'version' => '4.0.2',
+    'version' => '4.1.0',
     'constraints' => [
         'depends' => [
             'typo3' => '13.4.0-14.99.99',
         ],
         'conflicts' => [],
-        'suggests' => [],
+        'suggests' => [
+            'ot_icons' => '',
+            'ot_iconselector' => '',
+        ],
     ],
 ];
