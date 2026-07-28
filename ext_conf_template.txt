@@ -6,3 +6,6 @@ icons = chevron-left, chevron-right, download, file, file-pdf, paper-plane, arro
 
 # cat=General/others/c1; type=string; label=Path to directory with icons:Example: EXT:ot_febuild/Resources/Public/Assets/Website/SVG/solid/
 pathIcons =
+
+# cat=General/others/d1; type=string; label=Lightbox link types: Comma-separated list of lightbox link types to offer in the "Link Type" field. Available: "lightbox" (opens internal pages via Ajax, external links via iFrame), "lightboxIframe" (always opens via iFrame, e.g. for internal pages that need their own CSS/JS not loaded by the Ajax route). Leave empty to hide the lightbox option entirely. (Default: "lightbox, lightboxIframe")
+lightboxTypes = lightbox, lightboxIframe

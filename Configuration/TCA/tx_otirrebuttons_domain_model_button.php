@@ -13,6 +13,25 @@ $extensionSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)
 
 $icons = [];
 
+$linkTypeItems = [
+    [
+        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.default',
+        'value' => '',
+    ],
+];
+
+$availableLightboxTypes = array_intersect(
+    ['lightbox', 'lightboxIframe'],
+    GeneralUtility::trimExplode(',', (string)($extensionSettings['lightboxTypes'] ?? ''), true)
+);
+
+foreach ($availableLightboxTypes as $lightboxType) {
+    $linkTypeItems[] = [
+        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.' . $lightboxType,
+        'value' => $lightboxType,
+    ];
+}
+
 if (isset($extensionSettings['icons']) && trim($extensionSettings['icons']) !== '') {
     $iconArray = explode(',', $extensionSettings['icons']);
     $icons[] = [
@@ -263,20 +282,12 @@ return [
         'link_type' => [
             'exclude' => true,
             'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.label',
+            'description' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.description',
             'l10n_mode' => 'exclude',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'items' => [
-                    [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.default',
-                        'value' => '',
-                    ],
-                    [
-                        'label' => $ll . 'tx_otirrebuttons_domain_model_button.link_type.lightbox',
-                        'value' => 'lightbox',
-                    ],
-                ],
+                'items' => $linkTypeItems,
                 'size' => 1,
                 'maxitems' => 1,
             ],

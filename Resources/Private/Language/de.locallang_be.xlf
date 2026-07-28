@@ -114,6 +114,10 @@
 				<source>Link Type</source>
 				<target>Link Typ</target>
 			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.description" resname="tx_otirrebuttons_domain_model_button.link_type.description" approved="yes">
+				<source>"Lightbox" opens internal pages via Ajax and external links via iFrame. "Lightbox (iFrame)" always opens via iFrame, e.g. for internal pages that need their own CSS/JS not loaded by the Ajax route.</source>
+				<target>"Lightbox" öffnet interne Seiten per Ajax und externe Links per iFrame. "Lightbox (iFrame)" öffnet immer per iFrame, z. B. für interne Seiten, die eigenes CSS/JS benötigen, das über die Ajax-Route nicht geladen wird.</target>
+			</trans-unit>
 			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.default" resname="tx_otirrebuttons_domain_model_button.link_type.default" approved="yes">
 				<source>Default</source>
 				<target>Standard</target>
@@ -121,6 +125,10 @@
 			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightbox" resname="tx_otirrebuttons_domain_model_button.link_type.lightbox" approved="yes">
 				<source>Lightbox</source>
 				<target>Lightbox</target>
+			</trans-unit>
+			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightboxIframe" resname="tx_otirrebuttons_domain_model_button.link_type.lightboxIframe" approved="yes">
+				<source>Lightbox (iFrame)</source>
+				<target>Lightbox (iFrame)</target>
 			</trans-unit>
 		</body>
 	</file>
