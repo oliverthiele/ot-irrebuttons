@@ -8,7 +8,8 @@ use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-$extensionSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ot_irrebuttons');
+/** @var array<string, string> $extensionSettings */
+$extensionSettings = (array)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ot_irrebuttons');
 
 $availableLightboxTypes = array_intersect(
     ['lightbox', 'lightboxIframe'],

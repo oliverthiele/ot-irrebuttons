@@ -10,7 +10,8 @@ defined('TYPO3') or die();
 
 $ll = 'LLL:EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf:';
 
-$extensionSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ot_irrebuttons');
+/** @var array<string, string> $extensionSettings */
+$extensionSettings = (array)GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('ot_irrebuttons');
 
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
@@ -95,11 +96,13 @@ $tempColumns = [
 
 ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);
 
-if (isset($extensionSettings['enableButtonsForCTypes']) && $extensionSettings['enableButtonsForCTypes'] !== '') {
+$enabledCTypes = trim((string)($extensionSettings['enableButtonsForCTypes'] ?? ''));
+
+if ($enabledCTypes !== '') {
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
         '--palette--;' . $ll . 'tx_otirrebuttons.palette.label;irreButtons, tx_otirrebuttons_domain_model_buttons',
-        $extensionSettings['enableButtonsForCTypes'],
+        $enabledCTypes,
         'after:bodytext'
     );
 }
