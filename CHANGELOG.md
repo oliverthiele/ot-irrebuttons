@@ -7,6 +7,59 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.0] — 2026-07-28
+
+### Added
+
+- Optional integration of `ot_iconselector`: if the extension is installed, the
+  button `Icon` field is rendered with the visual icon selector (search, SVG
+  preview, favourites) instead of the select box built from the `icons`
+  extension setting. Integrator favourites can be defined in the site setting
+  `otIconselector.favorites.buttons`. Without `ot_iconselector` nothing changes
+- New `link_type` option `lightboxIframe` — always opens the lightbox via
+  iFrame, for internal target pages that need their own CSS/JS not loaded by
+  the Ajax route
+- `IconSelectorDisplayCondition` hides the `Icon` and `Icon Position` fields
+  while `ot_iconselector` renders them but the site setting
+  `otIcons.iconDirectory` is empty or points to a directory that does not
+  exist — the selector could not return a single result in that case
+- Description for the `Icon` field (EN/DE) explaining the search and the
+  favourites button, shown while the selector renders the field
+- `lightboxTypes` extension configuration setting to control which lightbox
+  options are offered in the "Link Type" field (or to hide the lightbox
+  option entirely)
+- README section documenting the route enhancer, `PAGE` objects, Fluid
+  templates, JavaScript and SCSS required for the lightbox link types,
+  including the container wrapper both templates need to avoid a horizontal
+  scrollbar from Bootstrap's negative row margins, and why Ajax is preferable
+  to iFrame for internal pages (an iFrame cannot size itself to its content)
+
+### Changed
+
+- `link_type=lightbox` now opens internal pages (`t3://page?uid=...`) via
+  Ajax (`data-type="ajax"`, `/ajax.html` suffix) instead of iFrame; external
+  links keep the iFrame behaviour
+- The `link_type` field is now omitted from the palette entirely when
+  `lightboxTypes` results in no selectable lightbox option (nothing to
+  switch between)
+- XLIFF files are indented with two spaces instead of tabs. The `.editorconfig`
+  declared tabs for `*.xlf`, which contradicted the project convention
+
+### Fixed
+
+- `link_type=lightbox` on `mailto:`/`tel:` links no longer enables
+  `data-fancybox` — these now render as plain links
+- Reading the extension configuration no longer assumes the settings keys
+  exist. `Configuration/Icons.php` additionally catches
+  `ExtensionConfigurationExtensionNotConfiguredException`, which is thrown
+  while the configuration has not been written yet (e.g. during the first
+  request after installation)
+- Empty entries in the `icons` setting (from a trailing comma) no longer
+  produce a blank icon item
+- Missing German translation for the `Link` button layout option
+- `approved="yes"` removed from the English source file — the attribute belongs
+  in translation files only
+
 ## [4.0.2] — 2026-06-17
 
 ### Fixed
@@ -151,7 +204,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.2...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.1.0...HEAD
+[4.1.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.2...v4.1.0
 [4.0.2]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...v4.0.0

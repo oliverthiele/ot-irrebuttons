@@ -2,10 +2,6 @@
 # PHPStan configuration for ot-irrebuttons (TYPO3 Extension)
 # ============================================================
 
-includes:
-  # TYPO3-specific PHPStan rules
-  - ../../vendor/saschaegerer/phpstan-typo3/extension.neon
-
 parameters:
   # ----------------------------------------------------------------
   # General settings
@@ -13,6 +9,7 @@ parameters:
   level: 9
   paths:
     - Classes/
+    - Configuration/
   tmpDir: ../../var/cache/phpstan/ot-irrebuttons
   reportUnmatchedIgnoredErrors: false
   checkUninitializedProperties: true

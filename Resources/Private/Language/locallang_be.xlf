@@ -1,102 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file source-language="en"
-		  datatype="plaintext"
-		  original="EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf"
-		  date="2023-12-04T14:05:46Z"
-		  product-name="ot-irrebuttons">
-		<header/>
-		<body>
-			<trans-unit id="tx_otirrebuttons_domain_model_button" resname="tx_otirrebuttons_domain_model_button">
-				<source>IRRE Buttons</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.label" resname="tx_otirrebuttons_domain_model_button.label">
-				<source>Buttons</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.description" resname="tx_otirrebuttons_domain_model_button.description">
-				<source>Buttons with optional icons</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_size.label" resname="tx_otirrebuttons_button_size.label">
-				<source>Button Size</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_size.default" resname="tx_otirrebuttons_button_size.default">
-				<source>Default</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_size.small" resname="tx_otirrebuttons_button_size.small">
-				<source>Small</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_size.large" resname="tx_otirrebuttons_button_size.large">
-				<source>Large</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons.palette.label" resname="tx_otirrebuttons.palette.label">
-				<source>Configuration of buttons</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_position.label" resname="tx_otirrebuttons_button_position.label">
-				<source>Alignment of buttons</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_position.start" resname="tx_otirrebuttons_button_position.start">
-				<source>Left (Start)</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_position.center" resname="tx_otirrebuttons_button_position.center">
-				<source>Center</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_button_position.end" resname="tx_otirrebuttons_button_position.end">
-				<source>Right (End)</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label">
-				<source>Label</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link.label" resname="tx_otirrebuttons_domain_model_button.link.label" approved="yes">
-				<source>Link</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.label" resname="tx_otirrebuttons_domain_model_button.layout.label">
-				<source>Layout</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.link" resname="tx_otirrebuttons_domain_model_button.layout.link">
-				<source>Link</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.solid" resname="tx_otirrebuttons_domain_model_button.layout.group.solid">
-				<source>Solid</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.outline" resname="tx_otirrebuttons_domain_model_button.layout.group.outline">
-				<source>Outline</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.primary" resname="tx_otirrebuttons_domain_model_button.layout.primary">
-				<source>Primary</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.secondary" resname="tx_otirrebuttons_domain_model_button.layout.secondary">
-				<source>Secondary</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.light" resname="tx_otirrebuttons_domain_model_button.layout.light">
-				<source>Light</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.layout.dark" resname="tx_otirrebuttons_domain_model_button.layout.dark">
-				<source>Dark</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.position.label" resname="tx_otirrebuttons_domain_model_button.position.label">
-				<source>Position</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icon.label" resname="tx_otirrebuttons_domain_model_button.icon.label">
-				<source>Icon</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.label" resname="tx_otirrebuttons_domain_model_button.icon_position.label">
-				<source>Icon Position</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.left" resname="tx_otirrebuttons_domain_model_button.icon_position.left">
-				<source>Left</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.right" resname="tx_otirrebuttons_domain_model_button.icon_position.right">
-				<source>Right</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.label" resname="tx_otirrebuttons_domain_model_button.link_type.label">
-				<source>Link Type</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.default" resname="tx_otirrebuttons_domain_model_button.link_type.default">
-				<source>Default</source>
-			</trans-unit>
-			<trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightbox" resname="tx_otirrebuttons_domain_model_button.link_type.lightbox">
-				<source>Lightbox</source>
-			</trans-unit>
-		</body>
-	</file>
+  <file source-language="en"
+        datatype="plaintext"
+        original="EXT:ot_irrebuttons/Resources/Private/Language/locallang_be.xlf"
+        date="2023-12-04T14:05:46Z"
+        product-name="ot-irrebuttons">
+    <header/>
+    <body>
+      <trans-unit id="tx_otirrebuttons_domain_model_button" resname="tx_otirrebuttons_domain_model_button">
+        <source>IRRE Buttons</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.label" resname="tx_otirrebuttons_domain_model_button.label">
+        <source>Buttons</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.description" resname="tx_otirrebuttons_domain_model_button.description">
+        <source>Buttons with optional icons</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_size.label" resname="tx_otirrebuttons_button_size.label">
+        <source>Button Size</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_size.default" resname="tx_otirrebuttons_button_size.default">
+        <source>Default</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_size.small" resname="tx_otirrebuttons_button_size.small">
+        <source>Small</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_size.large" resname="tx_otirrebuttons_button_size.large">
+        <source>Large</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons.palette.label" resname="tx_otirrebuttons.palette.label">
+        <source>Configuration of buttons</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_position.label" resname="tx_otirrebuttons_button_position.label">
+        <source>Alignment of buttons</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_position.start" resname="tx_otirrebuttons_button_position.start">
+        <source>Left (Start)</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_position.center" resname="tx_otirrebuttons_button_position.center">
+        <source>Center</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_button_position.end" resname="tx_otirrebuttons_button_position.end">
+        <source>Right (End)</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.text.label" resname="tx_otirrebuttons_domain_model_button.text.label">
+        <source>Label</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.link.label" resname="tx_otirrebuttons_domain_model_button.link.label">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.label" resname="tx_otirrebuttons_domain_model_button.layout.label">
+        <source>Layout</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.link" resname="tx_otirrebuttons_domain_model_button.layout.link">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.solid" resname="tx_otirrebuttons_domain_model_button.layout.group.solid">
+        <source>Solid</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.group.outline" resname="tx_otirrebuttons_domain_model_button.layout.group.outline">
+        <source>Outline</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.primary" resname="tx_otirrebuttons_domain_model_button.layout.primary">
+        <source>Primary</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.secondary" resname="tx_otirrebuttons_domain_model_button.layout.secondary">
+        <source>Secondary</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.light" resname="tx_otirrebuttons_domain_model_button.layout.light">
+        <source>Light</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.layout.dark" resname="tx_otirrebuttons_domain_model_button.layout.dark">
+        <source>Dark</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.position.label" resname="tx_otirrebuttons_domain_model_button.position.label">
+        <source>Position</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.icon.label" resname="tx_otirrebuttons_domain_model_button.icon.label">
+        <source>Icon</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.icon.description" resname="tx_otirrebuttons_domain_model_button.icon.description">
+        <source>Type at least two characters to search. The star button lists the preselected icons.</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.label" resname="tx_otirrebuttons_domain_model_button.icon_position.label">
+        <source>Icon Position</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.left" resname="tx_otirrebuttons_domain_model_button.icon_position.left">
+        <source>Left</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.icon_position.right" resname="tx_otirrebuttons_domain_model_button.icon_position.right">
+        <source>Right</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.link_type.label" resname="tx_otirrebuttons_domain_model_button.link_type.label">
+        <source>Link Type</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.link_type.description" resname="tx_otirrebuttons_domain_model_button.link_type.description">
+        <source>"Lightbox" opens internal pages via Ajax and external links via iFrame. "Lightbox (iFrame)" always opens via iFrame, e.g. for internal pages that need their own CSS/JS not loaded by the Ajax route.</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.link_type.default" resname="tx_otirrebuttons_domain_model_button.link_type.default">
+        <source>Default</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightbox" resname="tx_otirrebuttons_domain_model_button.link_type.lightbox">
+        <source>Lightbox</source>
+      </trans-unit>
+      <trans-unit id="tx_otirrebuttons_domain_model_button.link_type.lightboxIframe" resname="tx_otirrebuttons_domain_model_button.link_type.lightboxIframe">
+        <source>Lightbox (iFrame)</source>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>

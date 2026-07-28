@@ -44,19 +44,59 @@
 
                 <f:switch expression="{button.link_type}">
                     <f:case value="lightbox">
-                        <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
-
                         <f:if condition="{f:startsWith(search: 't3://page', subject: button.link)}">
-                            <f:variable name="additionalAttributes"
-                                        value="{'role' : 'button', 'data-fancybox': '', data-type: 'iframe'}"/>
+                            <f:then>
+                                <f:variable name="targetUri"><f:uri.typolink parameter="{button.link}"/></f:variable>
+                                <f:variable name="additionalAttributes"
+                                            value="{'role': 'button', 'data-fancybox': '', 'data-type': 'ajax', 'data-src': '{targetUri}/ajax.html', 'data-options': '{&quot;mainClass&quot;:&quot;ot-fancybox-ajax&quot;}'}"/>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{f:startsWith(search: 'http', subject: button.link)}">
+                                    <f:then>
+                                        <f:variable name="additionalAttributes"
+                                                    value="{'role': 'button', 'data-fancybox': '', 'data-type': 'iframe', 'data-options': '{&quot;mainClass&quot;:&quot;ot-fancybox-iframe&quot;}'}"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{f:startsWith(search: 't3://file', subject: button.link)}">
+                                            <f:then>
+                                                <f:variable name="additionalAttributes"
+                                                            value="{'role': 'button', 'data-fancybox': ''}"/>
+                                            </f:then>
+                                            <f:else>
+                                                <f:variable name="additionalAttributes" value="{'role': 'button'}"/>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
                         </f:if>
-                        <f:if condition="{f:startsWith(search: 'http', subject: button.link)}">
-                            <f:variable name="additionalAttributes"
-                                        value="{'role' : 'button', 'data-fancybox': '', data-type: 'iframe'}"/>
-                        </f:if>
-
-                        <f:if condition="{f:startsWith(search: 't3://file', subject: button.link)}">
-                            <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
+                    </f:case>
+                    <f:case value="lightboxIframe">
+                        <f:if condition="{f:startsWith(search: 't3://page', subject: button.link)}">
+                            <f:then>
+                                <f:variable name="targetUri"><f:uri.typolink parameter="{button.link}"/></f:variable>
+                                <f:variable name="additionalAttributes"
+                                            value="{'role': 'button', 'data-fancybox': '', 'data-type': 'iframe', 'data-src': '{targetUri}/content.html', 'data-options': '{&quot;mainClass&quot;:&quot;ot-fancybox-iframe&quot;}'}"/>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{f:startsWith(search: 'http', subject: button.link)}">
+                                    <f:then>
+                                        <f:variable name="additionalAttributes"
+                                                    value="{'role': 'button', 'data-fancybox': '', 'data-type': 'iframe', 'data-options': '{&quot;mainClass&quot;:&quot;ot-fancybox-iframe&quot;}'}"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{f:startsWith(search: 't3://file', subject: button.link)}">
+                                            <f:then>
+                                                <f:variable name="additionalAttributes"
+                                                            value="{'role': 'button', 'data-fancybox': ''}"/>
+                                            </f:then>
+                                            <f:else>
+                                                <f:variable name="additionalAttributes" value="{'role': 'button'}"/>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
                         </f:if>
                     </f:case>
                     <f:defaultCase>
