@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.0] — 2026-07-31
+
+### Changed
+
+- **Breaking:** Drop TYPO3 v13 support, require TYPO3 `^14.3`
+- **Breaking:** Raise the PHP minimum to `>=8.4`, matching what the SiteKit
+  distribution already enforces
+
 ## [4.1.0] — 2026-07-28
 
 ### Added
@@ -204,7 +212,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.0...HEAD
+[5.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.2...v4.1.0
 [4.0.2]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.0...v4.0.1
