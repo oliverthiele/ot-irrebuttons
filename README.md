@@ -3,7 +3,7 @@
 Extends `tt_content` with IRRE-managed button records — buttons are configured
 directly in the backend without touching the RTE.
 
-[![TYPO3](https://img.shields.io/badge/TYPO3-13.4%20%7C%2014.3-orange.svg)](https://typo3.org/)
+[![TYPO3](https://img.shields.io/badge/TYPO3-14.3-orange.svg)](https://typo3.org/)
 [![Packagist Version](https://img.shields.io/packagist/v/oliverthiele/ot-irrebuttons.svg)](https://packagist.org/packages/oliverthiele/ot-irrebuttons)
 [![PHP](https://img.shields.io/packagist/dependency-v/oliverthiele/ot-irrebuttons/php.svg)](https://php.net/)
 [![License](https://img.shields.io/packagist/l/oliverthiele/ot-irrebuttons.svg)](LICENSE)
@@ -30,8 +30,8 @@ directly in the backend without touching the RTE.
 
 | Dependency | Version        |
 |------------|----------------|
-| TYPO3      | ^13.4 \| ^14.3 |
-| PHP        | >=8.3          |
+| TYPO3      | ^14.3          |
+| PHP        | >=8.4          |
 
 ## Installation
 
