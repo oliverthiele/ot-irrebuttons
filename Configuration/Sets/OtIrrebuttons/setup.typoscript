@@ -1,16 +1,20 @@
 @import 'EXT:ot_irrebuttons/Configuration/TypoScript/setup.typoscript'
 
-# Overwrite the old constant projectSettings.framework.directory to be compatible with the Sitekit extensions
-lib.contentElement {
-  templateRootPaths {
-    15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Templates/
-  }
+# Overwrite the old constant projectSettings.framework.directory to be compatible with the Sitekit extensions.
+# Without the condition this also replaces the paths in projects that do not provide
+# {$sitekit.frameworks.frontend.directory}, leaving the constant unresolved.
+[isLoaded('ot_sitekitbase')]
+  lib.contentElement {
+    templateRootPaths {
+      15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Templates/
+    }
 
-  layoutRootPaths {
-    15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Layouts/
-  }
+    layoutRootPaths {
+      15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Layouts/
+    }
 
-  partialRootPaths {
-    15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Partials/
+    partialRootPaths {
+      15 = EXT:ot_irrebuttons/Resources/Private/{$sitekit.frameworks.frontend.directory}/Partials/
+    }
   }
-}
+[END]

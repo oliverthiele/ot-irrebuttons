@@ -1,3 +1,4 @@
-# All my Extensions use now {$sitekit.frameworks.frontend.directory} instead projectSettings.framework.directory!
-#
-# @import 'EXT:ot_irrebuttons/Configuration/TypoScript/constants.typoscript'
+# Default for the legacy constant, so the extension also works without the SiteKit extensions.
+# The setup overrides the resource paths with {$sitekit.frameworks.frontend.directory}
+# as soon as "ot_sitekitbase" is installed.
+@import 'EXT:ot_irrebuttons/Configuration/TypoScript/constants.typoscript'
