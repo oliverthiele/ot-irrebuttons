@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- The site set replaced the resource paths with
+  `{$sitekit.frameworks.frontend.directory}` unconditionally. In projects
+  without `ot_sitekitbase` nothing defines that constant, so the paths stayed
+  unresolved and the button partials were no longer found. The override now
+  runs inside `[isLoaded('ot_sitekitbase')]`
+- The site set did not import the extension constants, leaving
+  `{$projectSettings.framework.directory}` without a default
+
 ## [5.0.0] — 2026-07-31
 
 ### Changed
