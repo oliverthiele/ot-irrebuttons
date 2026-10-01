@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Remove `ext_emconf.php`: TYPO3 14.2+ reads the extension metadata from
+  `composer.json` in classic mode as well (#108345), so the version and
+  `providesPackages` are declared there now
+
 ## [5.0.1] — 2026-08-12
 
 ### Fixed

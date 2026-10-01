@@ -37,7 +37,11 @@
 			"dev-main": "5.0.x-dev"
 		},
 		"typo3/cms": {
-			"extension-key": "ot_irrebuttons"
+			"extension-key": "ot_irrebuttons",
+			"version": "5.0.1",
+			"Package": {
+				"providesPackages": {}
+			}
 		}
 	}
 }
