@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.2] — 2026-10-05
+
 ### Changed
 
 - Remove `ext_emconf.php`: TYPO3 14.2+ reads the extension metadata from
@@ -233,7 +235,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.1...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.2...HEAD
+[5.0.2]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.2...v4.1.0
