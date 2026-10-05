@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [5.0.2] — 2026-10-05
+
+### Changed
+
+- Remove `ext_emconf.php`: TYPO3 14.2+ reads the extension metadata from
+  `composer.json` in classic mode as well (#108345), so the version and
+  `providesPackages` are declared there now
+- Replace `ctrl.searchFields`, which TYPO3 14 no longer evaluates (#106972),
+  with `'searchable' => false` on the icon field; the backend search finds the
+  same fields as before
+
 ## [5.0.1] — 2026-08-12
 
 ### Fixed
@@ -222,7 +235,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.1...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.2...HEAD
+[5.0.2]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/oliverthiele/ot-irrebuttons/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.1.0...v5.0.0
 [4.1.0]: https://github.com/oliverthiele/ot-irrebuttons/compare/v4.0.2...v4.1.0
