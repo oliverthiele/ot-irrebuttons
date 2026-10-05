@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove `ext_emconf.php`: TYPO3 14.2+ reads the extension metadata from
   `composer.json` in classic mode as well (#108345), so the version and
   `providesPackages` are declared there now
+- Replace `ctrl.searchFields`, which TYPO3 14 no longer evaluates (#106972),
+  with `'searchable' => false` on the icon field; the backend search finds the
+  same fields as before
 
 ## [5.0.1] — 2026-08-12
 

@@ -69,6 +69,8 @@ $iconField = [
             'size' => 30,
             'max' => 50,
             'eval' => 'trim',
+            // Kept out of the backend search, as before with ctrl.searchFields.
+            'searchable' => false,
         ]
         : [
             'type' => 'select',
@@ -137,7 +139,6 @@ return [
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
-        'searchFields' => 'text',
         'iconfile' => 'EXT:ot_irrebuttons/Resources/Public/Icons/Extension.svg',
     ],
     'types' => [
