@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.10] — 2026-11-24
+
+### Fixed
+- Replace `f:startsWith` in the `IrreButtons` partial with `f:format.crop` comparisons
+  — the ViewHelper only exists from Fluid 4.6, so every content element with buttons
+  failed with a Fluid parse error on TYPO3 12 and early TYPO3 13.4 releases
+
 ## [3.2.9] — 2026-04-14
 
 ### Fixed
@@ -119,7 +126,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configurable icon identifiers
 - Overridable `Icon.html` partial
 
-[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...HEAD
+[Unreleased]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.10...HEAD
+[3.2.10]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.9...v3.2.10
 [3.2.9]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.8...v3.2.9
 [3.2.8]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.7...v3.2.8
 [3.2.7]: https://github.com/oliverthiele/ot-irrebuttons/compare/v3.2.6...v3.2.7
