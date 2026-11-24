@@ -46,16 +46,16 @@
                     <f:case value="lightbox">
                         <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
 
-                        <f:if condition="{f:startsWith(search: 't3://page', subject: button.link)}">
+                        <f:if condition="{button.link -> f:format.crop(maxCharacters: 9, append: '', respectWordBoundaries: 0, respectHtml: 0)} == 't3://page'">
                             <f:variable name="additionalAttributes"
                                         value="{'role' : 'button', 'data-fancybox': '', data-type: 'iframe'}"/>
                         </f:if>
-                        <f:if condition="{f:startsWith(search: 'http', subject: button.link)}">
+                        <f:if condition="{button.link -> f:format.crop(maxCharacters: 4, append: '', respectWordBoundaries: 0, respectHtml: 0)} == 'http'">
                             <f:variable name="additionalAttributes"
                                         value="{'role' : 'button', 'data-fancybox': '', data-type: 'iframe'}"/>
                         </f:if>
 
-                        <f:if condition="{f:startsWith(search: 't3://file', subject: button.link)}">
+                        <f:if condition="{button.link -> f:format.crop(maxCharacters: 9, append: '', respectWordBoundaries: 0, respectHtml: 0)} == 't3://file'">
                             <f:variable name="additionalAttributes" value="{'role' : 'button', 'data-fancybox': ''}"/>
                         </f:if>
                     </f:case>
